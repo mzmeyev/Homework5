@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class LoginPagePom extends BasePage {
     private final By ienaktButton = By.xpath("//div[@class='btn-login btn btn-default popover-link hidden-xs hidden-sm']");
-    private final By enterUsername = By.xpath("//input[@placeholder='Lietotājvārds']");
+    private final By enterUsername = By.xpath("//input[@name='userName']");
     private final By enterPassword = By.xpath("//input[@placeholder='Parole']");
     private final By submitButton = By.xpath("//button[@class='btn btn-primary btn-lg']");
     private final By profilePageButton = By.xpath("//a[@class='navbar-link']");
