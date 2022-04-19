@@ -12,11 +12,11 @@ Feature: Test forumcinema login and edit profile
     And Scroll the page down
     And Change name to test and lastname to this is a test
     And Validate name change
-    And Change Birth day
+    And Change Birth day to 5
     And Validate Birth day
-    And Change Birth month
+    And Change Birth month to Marts
     And Validate Birth month
-    And Change Birth year
+    And Change Birth year to 2000
     And Validate Birth year
     And Scroll the page down
     And Change Phone Number to 42069
@@ -24,7 +24,7 @@ Feature: Test forumcinema login and edit profile
     And Change Current City to Riga
     And Validate Current City
     And Change gender
-    And Change Preferred Language
+    And Change Preferred Language to Krievu
     And Validate Preferred Language
     Then Close Chrome
 

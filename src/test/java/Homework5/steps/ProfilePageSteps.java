@@ -21,20 +21,18 @@ public class ProfilePageSteps {
         profilePagePom.validateFirstAndLastName("test", "this is a test");
     }
 
-
-    @And("Change Birth day")
-    public void changeBirthDay() {
-        profilePagePom.selectBirthDay("5");
+    @And("^Change Birth day to (.*)$")
+    public void changeBirthDayTo(String day) {
+        profilePagePom.selectBirthDay(day);
     }
-
     @And("Validate Birth day")
     public void validateBirthDay() {
         profilePagePom.validateBirthDay("5");
     }
 
-    @And("Change Birth month")
-    public void changeBirthMonth() {
-        profilePagePom.selectBirthMonth("Marts");
+    @And("^Change Birth month to (.*)$")
+    public void changeBirthMonthTo(String month) {
+        profilePagePom.selectBirthMonth(month);
     }
 
     @And("Validate Birth month")
@@ -42,9 +40,9 @@ public class ProfilePageSteps {
         profilePagePom.validateBirthMonth("3");
     }
 
-    @And("Change Birth year")
-    public void changeBirthYear() {
-        profilePagePom.selectBirthYear("2000");
+    @And("^Change Birth year to (.*)$")
+    public void changeBirthYearTo(String year) {
+        profilePagePom.selectBirthYear(year);
     }
 
     @And("Validate Birth year")
@@ -77,9 +75,9 @@ public class ProfilePageSteps {
         profilePagePom.pressGenderButton();
     }
 
-    @And("Change Preferred Language")
-    public void changePreferredLanguage() {
-        profilePagePom.selectPreferredLanguage("Krievu");
+    @And("^Change Preferred Language to (.*)$")
+    public void changePreferredLanguageTo(String language) {
+        profilePagePom.selectPreferredLanguage(language);
     }
 
     @And("Validate Preferred Language")
@@ -96,4 +94,5 @@ public class ProfilePageSteps {
         }
         basePage.closeChrome();
     }
+
 }
