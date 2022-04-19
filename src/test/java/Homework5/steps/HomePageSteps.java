@@ -7,13 +7,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.JavascriptExecutor;
+
+import static Homework4.pages.BasePage.driver;
 
 
 public class HomePageSteps {
 
     BasePage basePage = new BasePage();
     LoginPagePom loginPagePom = new LoginPagePom();
-    ProfilePagePom profilePagePom = new ProfilePagePom();
 
     @Given("Open HomePage")
     public void openHomePage() {
@@ -43,5 +45,11 @@ public class HomePageSteps {
     @Then("Press Edit Profile button")
     public void pressEditProfileButton() {
         loginPagePom.pressEditProfileButton();
+    }
+
+    @And("Scroll the page down")
+    public void scrollThePageDown() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
     }
 }
